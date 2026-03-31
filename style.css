@@ -1,0 +1,244 @@
+/* style.css - Shared styling for all pages */
+/* ====== RESET & BASE ====== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f9f9f9; color: #222; }
+    a { color: #0056b3; text-decoration: none; }
+    a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid #ffbf47; }
+/*Style for the header*/
+header {
+  background: #004080;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+/*Style for the nav area*/
+nav {
+  display: flex;
+  justify-content: center;
+  background: #0066cc;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #004080;
+}
+
+.container {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/*Style for the research and references pages*/
+
+ .content {
+background: #ffffff;
+ padding: 1.5rem;
+ border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+ display: grid;
+ grid-template-columns: 1fr 300px;
+ 
+ gap: 20px;
+ align-items: start;
+}
+ .content img {
+width: 100%;
+border-radius: 8px; 
+}
+
+/*Style for resources page*/
+.resources{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .text-col {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px; 
+  }
+
+  /*Style for the symptoms page*/
+
+  .search{
+color: #0056b3; 
+ text-align: center;
+  }
+    #controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+    #searchBar {
+        flex: 1 1 250px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: white;
+    }
+    .symptom {
+        background: white;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .category {
+        font-weight: bold;
+        color: #555;
+        margin-bottom: 5px;
+    }
+    mark {
+        background-color: yellow;
+        padding: 0 2px;
+    }
+    #noResults {
+        text-align: center;
+        color: #888;
+        font-style: italic;
+        display: none;
+    }
+    
+    h2 {
+        color: #0056b3;
+    }
+    ul {
+        padding-left: 20px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: white;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    a {
+      color: #005b96;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    
+  body {  
+  position: relative;  
+  min-height: 100vh;  
+  margin: 0;  
+  padding-bottom: 50px; /* Footer height */  
+}  
+
+footer {
+ position: absolute;  
+  bottom: 0;  
+  width: 100%;  
+  height: 50px; /* Fixed footer height */ 
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem; 
+}
+  /* Container for the page content and footer */
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+  
+/* Main content grows to fill remaining space */
+.main-content {
+  flex: 1;
+}
+  
+/*Style for the FAQ page*/
+
+.faq{
+ color: #0056b3; 
+ text-align: center;
+}
+    .faq-item {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+    .faq-question {
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    .faq-question::after {
+        content: "+";
+        position: absolute;
+        right: 0;
+        font-size: 18px;
+    }
+
+    .faq-question.active::after {
+        content: "-";
+    }
+
+    .faq-answer {
+        display: none;
+        padding-top: 5px;
+        color: #555;
+    }
+
+    /*Style for the Reference page*/
+
+     ul.references li {
+            margin-bottom: 15px;
+        }
+
+    /*Style for the Form page*/
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #0066cc;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #004080;
+}
+
+@media (max-width: 768px) {
+        nav ul { display: none; flex-direction: column; background: #004080; width: 100%; }
+        nav ul.show { display: flex; }
+        .menu-toggle { display: block; }
+    }

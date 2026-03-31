@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+<html lang="en">
+<head>
+     <!-- Sets the character encoding to UTF-8 (supports most languages and symbols) -->
+  <meta charset="UTF-8">
+  <!-- Ensures the page is responsive and scales correctly on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the web page (appears in browser tab and search results) -->
+  <title>ALS Resources</title>
+  <!-- Link to an external CSS stylesheet for styling the page -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to an external javascript -->
+   <script src="script.js" defer></script>
+
+</head>
+<body>
+  <header>
+    <h1>⚛ALS Symptoms</h1>
+</header>
+<!-- Nav section -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="resources.html">Resources</a>
+    <a href="symptoms.html">Symptoms</a>
+    <a href="faq.html">FAQ</a>
+    <a href="references.html">References</a>
+    <a href="contact.html">Contact</a>
+    
+</nav>
+
+<h2 class="search">ALS Symptoms Search</h2>
+
+<div id="controls">
+    <input type="text" id="searchBar" placeholder="Search symptoms...">
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="early">Early</option>
+        <option value="progressed">Progressed</option>
+        <option value="major">Major</option>
+    </select>
+</div>
+
+<div id="symptomList">
+    <div class="symptom" data-category="early">
+        <div class="category">Early</div>
+        <p><strong>Muscle Weakness:</strong> Gradual weakness in arms, legs, or hands, often starting on one side.</p>
+    </div>
+    <div class="symptom" data-category="early">
+        <div class="category">Early</div>
+        <p><strong>Muscle Twitching:</strong> Small, involuntary muscle contractions (fasciculations) in arms, legs, or tongue.</p>
+    </div>
+    <div class="symptom" data-category="progressed">
+        <div class="category">Progressed</div>
+        <p><strong>Difficulty Speaking:</strong> Slurred or slowed speech due to weakening of facial and throat muscles.</p>
+    </div>
+    <div class="symptom" data-category="progressed">
+        <div class="category">Progressed</div>
+        <p><strong>Difficulty Swallowing:</strong> Trouble eating or drinking as throat muscles weaken.</p>
+    </div>
+    <div class="symptom" data-category="major">
+        <div class="category">Major</div>
+        <p><strong>Breathing Problems:</strong> Weakness in respiratory muscles leading to shortness of breath.</p>
+    </div>
+    <div class="symptom" data-category="major">
+        <div class="category">Major</div>
+        <p><strong>Paralysis:</strong> Loss of voluntary muscle control in most parts of the body.</p>
+    </div>
+</div>
+
+<p id="noResults">No results found.</p>
+
+<script>
+    const searchBar = document.getElementById('searchBar');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const symptoms = document.querySelectorAll('.symptom');
+    const noResults = document.getElementById('noResults');
+
+    function highlightText(element, query) {
+        const text = element.textContent;
+        if (!query) {
+            element.innerHTML = text; // reset
+            return;
+        }
+        const regex = new RegExp(`(${query})`, 'gi');
+        element.innerHTML = text.replace(regex, '<mark>$1</mark>');
+    }
+
+    function filterSymptoms() {
+        const searchText = searchBar.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
+        let visibleCount = 0;
+
+        symptoms.forEach(symptom => {
+            const category = symptom.getAttribute('data-category');
+            const categoryElement = symptom.querySelector('.category');
+            const descriptionElement = symptom.querySelector('p');
+
+            // Check if matches search and category
+            const matchesSearch = 
+                categoryElement.textContent.toLowerCase().includes(searchText) ||
+                descriptionElement.textContent.toLowerCase().includes(searchText);
+
+            const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+
+            if (matchesSearch && matchesCategory) {
+                symptom.style.display = '';
+                highlightText(categoryElement, searchText);
+                highlightText(descriptionElement, searchText);
+                visibleCount++;
+            } else {
+                symptom.style.display = 'none';
+                highlightText(categoryElement, '');
+                highlightText(descriptionElement, '');
+            }
+        });
+
+        // Show or hide "No results found" message
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    // Event listeners
+    searchBar.addEventListener('keyup', filterSymptoms);
+    categoryFilter.addEventListener('change', filterSymptoms);
+</script>
+
+</body>
+</html>
+<!-- Footer section -->
+<footer>
+   <p>&copy; 2026 ALS Information Center. All rights reserved 𓆩♡𓆪</p>
+  </footer>
+</body>
+</html>
