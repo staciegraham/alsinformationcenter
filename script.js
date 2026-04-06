@@ -1,4 +1,5 @@
 
+   // ----------------------
 // Search Bar Functionality
    const searchBar = document.getElementById('searchBar');
     const categoryFilter = document.getElementById('categoryFilter');
@@ -43,6 +44,7 @@
                 highlightText(descriptionElement, '');
             }
         });
+        
 
         // Show or hide "No results found" message
         noResults.style.display = visibleCount === 0 ? 'block' : 'none';
@@ -51,15 +53,8 @@
     // Event listeners
     searchBar.addEventListener('keyup', filterSymptoms);
     categoryFilter.addEventListener('change', filterSymptoms);
+    
 
 
-// ----------------------
-// FAQ Toggle Functionality
-// ----------------------
-document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
-    });
-});
+
 
