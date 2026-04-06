@@ -45,7 +45,6 @@
             }
         });
         
-
         // Show or hide "No results found" message
         noResults.style.display = visibleCount === 0 ? 'block' : 'none';
     }
