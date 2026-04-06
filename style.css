@@ -37,7 +37,12 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-/*Style for the research and references pages*/
+/*Style for the research page*/
+
+.content {
+        max-width: 1200px;
+        margin: auto;
+    }
 
  .content {
 background: #ffffff;
@@ -55,6 +60,13 @@ width: 100%;
 border-radius: 8px; 
 }
 
+/* Responsive: 1 column on small screens */
+    @media (max-width: 768px) {
+        .content {
+            grid-template-columns: 1fr; /* single column */
+        }
+    }
+
 /*Style for resources page*/
 .resources{
     display: grid;
@@ -67,6 +79,13 @@ border-radius: 8px;
     padding: 15px;
     border-radius: 5px; 
   }
+
+  /* Responsive: 1 column on small screens */
+    @media (max-width: 768px) {
+        .resources {
+            grid-template-columns: 1fr; /* single column */
+        }
+    }
 
   /*Style for the symptoms page*/
 
@@ -210,9 +229,36 @@ footer {
 
     /*Style for the Reference page*/
 
-     ul.references li {
-            margin-bottom: 15px;
+    .reference {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    /* Image floats to the right on larger screens */
+    .reference img {
+        float: right;
+        margin: 0 0 10px 15px;
+        max-width: 40%; /* Prevents image from being too large */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Clear floats after each reference block */
+    .reference::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    /* Responsive behavior for small screens */
+    @media (max-width: 600px) {
+        .reference img {
+            float: none;
+            display: block;
+            margin: 10px auto;
+            max-width: 100%;
         }
+    }
 
     /*Style for the Form page*/
 
