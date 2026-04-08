@@ -179,6 +179,11 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem; 
+
+  /* Make wrapper take full height */
+html, body {
+    height: 100%;
+}
 }
   /* Container for the page content and footer */
 .page-wrapper {
