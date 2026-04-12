@@ -19,15 +19,36 @@
     <h1>⚛ALS References</h1>
   </header>
 <!-- Nav section -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="resources.html">Resources</a>
-    <a href="symptoms.html">Symptoms</a>
-    <a href="faq.html">FAQ</a>
-    <a href="references.html">References</a>
-    <a href="contact.html">Contact</a>
-    
+   <nav>
+
+    <!-- Navigation links -->
+     
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="resources.html">Resources</a>
+        <a href="symptoms.html">Symptoms</a>
+        <a href="faq.html">FAQ</a>
+        <a href="references.html">References</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <!-- Hamburger icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<script>
+    // Toggle menu on mobile
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
 </nav>
  <div class="reference">
     <img src="images/als-awareness.jpg"  alt="ALS awareness">

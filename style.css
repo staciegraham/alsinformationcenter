@@ -12,34 +12,74 @@ header {
   text-align: center;
 }
 /*Style for the nav area*/
-nav {
+
+  nav {
   display: flex;
   justify-content: center;
   background: #0066cc;
   flex-wrap: wrap;
 }
+   /* Menu links container */
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+    }
 
-nav a {
-  color: white;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 0.8rem;
+        transition: background 0.3s;
+    }
+    .nav-links a:hover {
+        background-color: #004080;
+        border-radius: 4px;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        height: 3px;
+        width: 25px;
+        background: white;
+        margin: 4px 0;
+        transition: 0.3s;
+    }
+
+   /* Mobile styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;              /* Move to left side */
+        right: auto;          /* Remove right alignment */
+        background-color: #0066cc;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
 }
-
-nav a:hover {
-  background: #004080;
-}
-
-.container {
-  padding: 1.5rem;
-  max-width: 1200px;
-  margin: auto;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+.hamburger {
+    margin-left: 1rem; /* Push it away from the left edge */
+    margin-right: auto; /* Push other items to the right */
 }
 
 /*Style for the research page*/
 
 .content {
+  
         max-width: 1200px;
         margin: auto;
     }
@@ -288,8 +328,3 @@ form button:hover {
   background: #004080;
 }
 
-@media (max-width: 768px) {
-        nav ul { display: none; flex-direction: column; background: #004080; width: 100%; }
-        nav ul.show { display: flex; }
-        .menu-toggle { display: block; }
-    }

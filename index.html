@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- Link to an external javascript -->
    <script src="script.js" defer></script>
-  
+   
 </head>
 <body>
   <header>
@@ -21,16 +21,36 @@
   </header>
 <!-- Nav section -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="resources.html">Resources</a>
-    <a href="symptoms.html">Symptoms</a>
-    <a href="faq.html">FAQ</a>
-    <a href="references.html">References</a>
-    <a href="contact.html">Contact</a>
-    
+
+    <!-- Navigation links -->
+     
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="resources.html">Resources</a>
+        <a href="symptoms.html">Symptoms</a>
+        <a href="faq.html">FAQ</a>
+        <a href="references.html">References</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <!-- Hamburger icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </nav>
 
+<script>
+    // Toggle menu on mobile
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
+</nav>
   <section class="container">
     <img src="images/hero.jpg" alt="ALS Awareness" style="width:100%; border-radius:8px;">
     <h2>Understanding ALS</h2>
