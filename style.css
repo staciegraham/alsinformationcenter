@@ -76,6 +76,27 @@ header {
     margin-right: auto; /* Push other items to the right */
 }
 
+.container {
+    padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+    box-sizing: border-box;
+}
+
+hero {
+  margin-top: 1.5rem; /* space between nav and image */
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
 /*Style for the research page*/
 
 .content {
