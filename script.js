@@ -53,6 +53,7 @@
     searchBar.addEventListener('keyup', filterSymptoms);
     categoryFilter.addEventListener('change', filterSymptoms);
     
+    
 
 
 

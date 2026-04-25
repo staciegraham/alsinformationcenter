@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Link to an external javascript -->
    <script src="script.js" defer></script>
+   <!-- Link to accessibility widgets --> 
+   <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>
 </head>
 <body>
 <header>
@@ -20,9 +22,7 @@
 </header>
 <!-- Nav section -->
  <nav>
-
-    <!-- Navigation links -->
-     
+    <!-- Navigation links -->  
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
@@ -52,8 +52,10 @@
 
 <div class="container">
     <h2>Send us a message</h2>
-    <form action="https://api.web3forms.com/submit" method="POST">
-  <!-- Replace with your own access key from web3forms.com -->
+     <!-- Contact Form using Web3Forms API -->
+      <!-- This form sends submissions directly to my email via Web3Forms without needing a backend server. -->
+       <!-- Docs: https://web3forms.com/ -->
+    <form action="https://api.web3forms.com/submit" method="POST"> 
   <input type="hidden" name="access_key" value="9af02803-6129-4fc3-9661-ce43fae5d82d">
 
   <label for="name">Name</label>

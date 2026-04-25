@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Link to an external javascript -->
    <script src="script.js" defer></script>
-
+   <!-- Link to accessibility widgets --> 
+   <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>
 </head>
 <body>
   <header>
@@ -21,8 +22,7 @@
 <!-- Nav section -->
  <nav>
 
-    <!-- Navigation links -->
-     
+    <!-- Navigation links -->  
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
@@ -49,10 +49,7 @@
         navLinks.classList.toggle('show');
     });
 </script>
-
-
 <h2 class="search">ALS Symptoms Search</h2>
-
 <div id="controls">
     <input type="text" id="searchBar" placeholder="Search symptoms...">
     <select id="categoryFilter">
@@ -70,12 +67,21 @@
     </div>
     <div class="symptom" data-category="early">
         <div class="category">Early</div>
+        <p><strong>Balance or coordination issues:</strong> Frequent tripping or falling.</p>
+    </div>
+    <div class="symptom" data-category="early">
+        <div class="category">Early</div>
         <p><strong>Muscle Twitching:</strong> Small, involuntary muscle contractions (fasciculations) in arms, legs, or tongue.</p>
     </div>
     <div class="symptom" data-category="progressed">
         <div class="category">Progressed</div>
         <p><strong>Difficulty Speaking:</strong> Slurred or slowed speech due to weakening of facial and throat muscles.</p>
     </div>
+     <div class="symptom" data-category="progressed">
+        <div class="category">Progressed</div>
+        <p><strong>Loss of fine motor control:</strong> Making handling objects, writing, or walking without assistance difficult.</p>
+    </div>
+    
     <div class="symptom" data-category="progressed">
         <div class="category">Progressed</div>
         <p><strong>Difficulty Swallowing:</strong> Trouble eating or drinking as throat muscles weaken.</p>
@@ -83,6 +89,10 @@
     <div class="symptom" data-category="major">
         <div class="category">Major</div>
         <p><strong>Breathing Problems:</strong> Weakness in respiratory muscles leading to shortness of breath.</p>
+    </div>
+    <div class="symptom" data-category="major">
+        <div class="category">Major</div>
+        <p><strong>Inability to speak, chew, or swallow:</strong> Often necessitating feeding tubes and augmentative communication devices.</p>
     </div>
     <div class="symptom" data-category="major">
         <div class="category">Major</div>
