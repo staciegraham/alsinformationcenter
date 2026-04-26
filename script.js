@@ -1,7 +1,10 @@
 
-   // ----------------------
-// Search Bar Functionality
-   const searchBar = document.getElementById('searchBar');
+   document.addEventListener("DOMContentLoaded", () => {
+
+    // ----------------------
+    // Search Bar Functionality
+    // ----------------------
+    const searchBar = document.getElementById('searchBar');
     const categoryFilter = document.getElementById('categoryFilter');
     const symptoms = document.querySelectorAll('.symptom');
     const noResults = document.getElementById('noResults');
@@ -9,7 +12,7 @@
     function highlightText(element, query) {
         const text = element.textContent;
         if (!query) {
-            element.innerHTML = text; // reset
+            element.innerHTML = text;
             return;
         }
         const regex = new RegExp(`(${query})`, 'gi');
@@ -26,12 +29,12 @@
             const categoryElement = symptom.querySelector('.category');
             const descriptionElement = symptom.querySelector('p');
 
-            // Check if matches search and category
-            const matchesSearch = 
+            const matchesSearch =
                 categoryElement.textContent.toLowerCase().includes(searchText) ||
                 descriptionElement.textContent.toLowerCase().includes(searchText);
 
-            const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+            const matchesCategory =
+                selectedCategory === 'all' || category === selectedCategory;
 
             if (matchesSearch && matchesCategory) {
                 symptom.style.display = '';
@@ -44,17 +47,35 @@
                 highlightText(descriptionElement, '');
             }
         });
-        
-        // Show or hide "No results found" message
+
         noResults.style.display = visibleCount === 0 ? 'block' : 'none';
     }
 
-    // Event listeners
-    searchBar.addEventListener('keyup', filterSymptoms);
-    categoryFilter.addEventListener('change', filterSymptoms);
-    
-    
+    if (searchBar) searchBar.addEventListener('keyup', filterSymptoms);
+    if (categoryFilter) categoryFilter.addEventListener('change', filterSymptoms);
 
 
+    // ----------------------
+    // Mobile Hamburger Menu
+    // ----------------------
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    }
 
 
+    // ----------------------
+    // FAQ Toggle Functionality
+    // ----------------------
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+        });
+    });
+
+});
