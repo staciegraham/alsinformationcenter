@@ -2,98 +2,124 @@
 <!-- Declares the document type as HTML5 -->
 <html lang="en">
 <head>
-     <!-- Sets the character encoding to UTF-8 (supports most languages and symbols) -->
-  <meta charset="UTF-8">
-  <!-- Ensures the page is responsive and scales correctly on mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title of the web page (appears in browser tab and search results) -->
-  <title>ALS Resources</title>
-  <!-- Link to an external CSS stylesheet for styling the page -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Link to an external javascript -->
-   <script src="script.js" defer></script>
-   <!-- Link to accessibility widgets --> 
-   <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>
-</head>
-<body>
-  <header>
-    <h1>⚛ALS Symptoms</h1>
-</header>
-<!-- Nav section -->
- <nav>
+    <!-- Sets the character encoding to UTF-8 (supports most languages and symbols) -->
+    <meta charset="UTF-8">
 
-    <!-- Navigation links -->  
-    <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="resources.html">Resources</a>
-        <a href="symptoms.html">Symptoms</a>
-        <a href="faq.html">FAQ</a>
-        <a href="references.html">References</a>
-        <a href="contact.html">Contact</a>
+    <!-- Ensures the page is responsive and scales correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the web page (appears in browser tab and search results) -->
+    <title>ALS Resources</title>
+
+    <!-- Link to an external CSS stylesheet for styling the page -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to an external JavaScript file; 'defer' ensures it loads after HTML -->
+    <script src="script.js" defer></script>
+
+    <!-- Accessibility widget for improved usability -->
+    <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Main page heading -->
+        <h1>⚛ALS Symptoms</h1>
+    </header>
+
+    <!-- Navigation section -->
+    <nav>
+        <!-- Navigation links container -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="resources.html">Resources</a>
+            <a href="symptoms.html">Symptoms</a>
+            <a href="faq.html">FAQ</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Hamburger icon for mobile navigation -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Search section heading -->
+    <h2 class="search">ALS Symptoms Search</h2>
+
+    <!-- Search bar and category filter controls -->
+    <div id="controls">
+        <input type="text" id="searchBar" placeholder="Search symptoms...">
+        
+        <!-- Dropdown filter for symptom categories -->
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="early">Early</option>
+            <option value="progressed">Progressed</option>
+            <option value="major">Major</option>
+        </select>
     </div>
-    <!-- Hamburger icon -->
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+
+    <!-- Symptom list container -->
+    <div id="symptomList">
+
+        <!-- Individual symptom cards with category tags -->
+        <div class="symptom" data-category="early">
+            <div class="category">Early</div>
+            <p><strong>Muscle Weakness:</strong> Gradual weakness in arms, legs, or hands, often starting on one side.</p>
+        </div>
+
+        <div class="symptom" data-category="early">
+            <div class="category">Early</div>
+            <p><strong>Balance or coordination issues:</strong> Frequent tripping or falling.</p>
+        </div>
+
+        <div class="symptom" data-category="early">
+            <div class="category">Early</div>
+            <p><strong>Muscle Twitching:</strong> Small, involuntary muscle contractions (fasciculations) in arms, legs, or tongue.</p>
+        </div>
+
+        <div class="symptom" data-category="progressed">
+            <div class="category">Progressed</div>
+            <p><strong>Difficulty Speaking:</strong> Slurred or slowed speech due to weakening of facial and throat muscles.</p>
+        </div>
+
+        <div class="symptom" data-category="progressed">
+            <div class="category">Progressed</div>
+            <p><strong>Loss of fine motor control:</strong> Making handling objects, writing, or walking without assistance difficult.</p>
+        </div>
+
+        <div class="symptom" data-category="progressed">
+            <div class="category">Progressed</div>
+            <p><strong>Difficulty Swallowing:</strong> Trouble eating or drinking as throat muscles weaken.</p>
+        </div>
+
+        <div class="symptom" data-category="major">
+            <div class="category">Major</div>
+            <p><strong>Breathing Problems:</strong> Weakness in respiratory muscles leading to shortness of breath.</p>
+        </div>
+
+        <div class="symptom" data-category="major">
+            <div class="category">Major</div>
+            <p><strong>Inability to speak, chew, or swallow:</strong> Often necessitating feeding tubes and augmentative communication devices.</p>
+        </div>
+
+        <div class="symptom" data-category="major">
+            <div class="category">Major</div>
+            <p><strong>Paralysis:</strong> Loss of voluntary muscle control in most parts of the body.</p>
+        </div>
     </div>
-</nav>
-<h2 class="search">ALS Symptoms Search</h2>
-<div id="controls">
-    <input type="text" id="searchBar" placeholder="Search symptoms...">
-    <select id="categoryFilter">
-        <option value="all">All Categories</option>
-        <option value="early">Early</option>
-        <option value="progressed">Progressed</option>
-        <option value="major">Major</option>
-    </select>
-</div>
-<div id="symptomList">
-    <div class="symptom" data-category="early">
-        <div class="category">Early</div>
-        <p><strong>Muscle Weakness:</strong> Gradual weakness in arms, legs, or hands, often starting on one side.</p>
-    </div>
-    <div class="symptom" data-category="early">
-        <div class="category">Early</div>
-        <p><strong>Balance or coordination issues:</strong> Frequent tripping or falling.</p>
-    </div>
-    <div class="symptom" data-category="early">
-        <div class="category">Early</div>
-        <p><strong>Muscle Twitching:</strong> Small, involuntary muscle contractions (fasciculations) in arms, legs, or tongue.</p>
-    </div>
-    <div class="symptom" data-category="progressed">
-        <div class="category">Progressed</div>
-        <p><strong>Difficulty Speaking:</strong> Slurred or slowed speech due to weakening of facial and throat muscles.</p>
-    </div>
-     <div class="symptom" data-category="progressed">
-        <div class="category">Progressed</div>
-        <p><strong>Loss of fine motor control:</strong> Making handling objects, writing, or walking without assistance difficult.</p>
-    </div>
-    
-    <div class="symptom" data-category="progressed">
-        <div class="category">Progressed</div>
-        <p><strong>Difficulty Swallowing:</strong> Trouble eating or drinking as throat muscles weaken.</p>
-    </div>
-    <div class="symptom" data-category="major">
-        <div class="category">Major</div>
-        <p><strong>Breathing Problems:</strong> Weakness in respiratory muscles leading to shortness of breath.</p>
-    </div>
-    <div class="symptom" data-category="major">
-        <div class="category">Major</div>
-        <p><strong>Inability to speak, chew, or swallow:</strong> Often necessitating feeding tubes and augmentative communication devices.</p>
-    </div>
-    <div class="symptom" data-category="major">
-        <div class="category">Major</div>
-        <p><strong>Paralysis:</strong> Loss of voluntary muscle control in most parts of the body.</p>
-    </div>
-</div>
-<p id="noResults">No results found.</p>
-</body>
-</html>
-<!-- Footer section -->
-<footer>
-   <p>&copy; 2026 ALS Information Center. All rights reserved 𓆩♡𓆪</p>
-  </footer>
+
+    <!-- Message displayed when no symptoms match the search/filter -->
+    <p id="noResults">No results found.</p>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 ALS Information Center. All rights reserved 𓆩♡𓆪</p>
+    </footer>
 </body>
 </html>

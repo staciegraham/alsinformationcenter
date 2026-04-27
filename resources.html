@@ -2,29 +2,35 @@
 <!-- Declares the document type as HTML5 -->
 <html lang="en">
 <head>
-     <!-- Sets the character encoding to UTF-8 (supports most languages and symbols) -->
-  <meta charset="UTF-8">
-  <!-- Ensures the page is responsive and scales correctly on mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title of the web page (appears in browser tab and search results) -->
-  <title>ALS Resources</title>
-  <!-- Link to an external CSS stylesheet for styling the page -->
+    <!-- Sets the character encoding to UTF-8 (supports most languages and symbols) -->
+    <meta charset="UTF-8">
+
+    <!-- Ensures the page scales properly on mobile and responsive devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title displayed in browser tab -->
+    <title>ALS Resources</title>
+
+    <!-- External stylesheet for layout, colors, and responsive design -->
     <link rel="stylesheet" href="style.css">
-    <!-- Link to an external javascript -->
-   <script src="script.js" defer></script>
-   <!-- Link to accessibility widgets --> 
-   <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>   
+
+    <!-- External JavaScript for interactivity (hamburger menu, widgets, etc.) -->
+    <script src="script.js" defer></script>
+
+    <!-- Accessibility widget library for enhanced user support -->
+    <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>
 </head>
-</head>
+
 <body>
 <header>
+    <!-- Main page heading and tagline -->
     <h1>⚛ALS Resources</h1>
     <p>Support, guidance, and trusted information for everyone impacted by ALS</p>
 </header>
-<!-- Nav section -->
- <nav>
 
-    <!-- Navigation links --> 
+<!-- Navigation bar -->
+<nav>
+    <!-- Navigation links container -->
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
@@ -34,74 +40,80 @@
         <a href="references.html">References</a>
         <a href="contact.html">Contact</a>
     </div>
-    <!-- Hamburger icon -->
+
+    <!-- Hamburger icon for mobile navigation toggle -->
     <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
     </div>
 </nav>
-   <div class="resources">
-    <!-- Patient resources -->
-    <div class="column">
-    <h2>For Patients</h2>
-    <ul>
-      <li>
-         <a href="https://www.letstalkals.com/" target="_blank"> ALS Educational Support – Patient Resources</a><br>
-        Comprehensive guides covering diagnosis, symptom management, and daily living tips.
-      </li>
-      <li>
-        <a href="https://www.youralsguide.com/resource-list.html" target="_blank">Your ALS Guide – Patient Resources</a><br>
-        Free tools, videos, and service directories to help navigate life with ALS.
-      </li>
-      <li>
-        <a href="https://www.als.net/als-resources/" target="_blank">ALS Therapy Development Institute – Patient Support</a><br>
-        Information on clinical trials, treatment research, and patient health.
-      </li>
-    </ul>
-  </div>
 
-  <!-- For caregivers -->
-    <div class="column">
-    <h2>For Caregivers</h2>
-    <ul>
-      <li>
-        <a href="https://www.als.org/navigating-als/resources" target="_blank">ALS Association – Caregiver Resources</a><br>
-        Practical advice, emotional support, and planning tools for caregivers.
-      </li>
-      <li>
-        <a href="https://www.youralsguide.com/resource-list.html" target="_blank">Your ALS Guide – Caregiver Support</a><br>
-        Tips for daily care, home modifications, and connecting with support groups.
-      </li>
-      <li>
-        <a href="https://www.caregiver.org/" target="_blank">Family Caregiver Alliance – ALS Caregiving</a><br>
-        Guidance on managing care responsibilities and maintaining caregiver well-being.
-      </li>
-    </ul>
-  </div>
+<!-- Main resources section containing three columns -->
+<div class="resources">
 
-  <!-- For healthcare professionals -->
+    <!-- Patient resources column -->
     <div class="column">
-    <h2>For Healthcare Professionals</h2>
-    <ul>
-      <li>
-        <a href="https://www.als.org/navigating-als/resources" target="_blank">ALS Association – Professional Resources</a><br>
-        Clinical guidelines, continuing education, and patient care best practices.
-      </li>
-      <li>
-        <a href="https://www.als.net/als-resources/" target="_blank">ALS Therapy Development Institute – Research & Clinical Data</a><br>
-        Access to the latest ALS research, trial updates, and treatment insights.
-      </li>
-      <li>
-        <a href="https://www.ninds.nih.gov/health-information/disorders/amyotrophic-lateral-sclerosis-als" target="_blank">NINDS – ALS Information</a><br>
-        Evidence-based information on ALS diagnosis, progression, and treatment.
-      </li>
-    </ul>
-  </div>
+        <h2>For Patients</h2>
+        <ul>
+            <li>
+                <a href="https://www.letstalkals.com/" target="_blank">ALS Educational Support – Patient Resources</a><br>
+                Comprehensive guides covering diagnosis, symptom management, and daily living tips.
+            </li>
+            <li>
+                <a href="https://www.youralsguide.com/resource-list.html" target="_blank">Your ALS Guide – Patient Resources</a><br>
+                Free tools, videos, and service directories to help navigate life with ALS.
+            </li>
+            <li>
+                <a href="https://www.als.net/als-resources/" target="_blank">ALS Therapy Development Institute – Patient Support</a><br>
+                Information on clinical trials, treatment research, and patient health.
+            </li>
+        </ul>
+    </div>
+
+    <!-- Caregiver resources column -->
+    <div class="column">
+        <h2>For Caregivers</h2>
+        <ul>
+            <li>
+                <a href="https://www.als.org/navigating-als/resources" target="_blank">ALS Association – Caregiver Resources</a><br>
+                Practical advice, emotional support, and planning tools for caregivers.
+            </li>
+            <li>
+                <a href="https://www.youralsguide.com/resource-list.html" target="_blank">Your ALS Guide – Caregiver Support</a><br>
+                Tips for daily care, home modifications, and connecting with support groups.
+            </li>
+            <li>
+                <a href="https://www.caregiver.org/" target="_blank">Family Caregiver Alliance – ALS Caregiving</a><br>
+                Guidance on managing care responsibilities and maintaining caregiver well-being.
+            </li>
+        </ul>
+    </div>
+
+    <!-- Healthcare professional resources column -->
+    <div class="column">
+        <h2>For Healthcare Professionals</h2>
+        <ul>
+            <li>
+                <a href="https://www.als.org/navigating-als/resources" target="_blank">ALS Association – Professional Resources</a><br>
+                Clinical guidelines, continuing education, and patient care best practices.
+            </li>
+            <li>
+                <a href="https://www.als.net/als-resources/" target="_blank">ALS Therapy Development Institute – Research & Clinical Data</a><br>
+                Access to the latest ALS research, trial updates, and treatment insights.
+            </li>
+            <li>
+                <a href="https://www.ninds.nih.gov/health-information/disorders/amyotrophic-lateral-sclerosis-als" target="_blank">NINDS – ALS Information</a><br>
+                Evidence-based information on ALS diagnosis, progression, and treatment.
+            </li>
+        </ul>
+    </div>
+</div>
 
 <!-- Footer section -->
 <footer>
-   <p>&copy; 2026 ALS Information Center. All rights reserved 𓆩♡𓆪</p>
-  </footer>
+    <p>&copy; 2026 ALS Information Center. All rights reserved 𓆩♡𓆪</p>
+</footer>
+
 </body>
-</html
+</html>

@@ -3,115 +3,141 @@
 <html lang="en">
 <head>
     <!-- Sets the character encoding to UTF-8 (supports most languages and symbols) -->
-  <meta charset="UTF-8">
-  <!-- Ensures the page is responsive and scales correctly on mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Title of the web page (appears in browser tab and search results) -->
-  <title>ALS Information - Home</title>
-  <!-- Link to an external CSS stylesheet for styling the page -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Link to an external javascript -->
-   <script src="script.js" defer></script>
-   <!-- Link to accessibility widgets --> 
-   <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>
+    <meta charset="UTF-8">
+
+    <!-- Ensures the page is responsive and scales correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the web page (appears in browser tab and search results) -->
+    <title>ALS Information - Home</title>
+
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to external JavaScript file; defer ensures script loads after HTML -->
+    <script src="script.js" defer></script>
+
+    <!-- Accessibility widget library for enhanced usability -->
+    <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>
 </head>
+
 <body>
+    <!-- Header section containing page title -->
     <header>
         <h1>⚛ALS FAQ</h1>
     </header>
-<!-- NAV Section -->
-     <nav>
 
-    <!-- Navigation links -->
-    <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="resources.html">Resources</a>
-        <a href="symptoms.html">Symptoms</a>
-        <a href="faq.html">FAQ</a>
-        <a href="references.html">References</a>
-        <a href="contact.html">Contact</a>
+    <!-- Navigation Section -->
+    <nav>
+        <!-- Navigation links container -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="resources.html">Resources</a>
+            <a href="symptoms.html">Symptoms</a>
+            <a href="faq.html">FAQ</a>
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Hamburger icon for mobile navigation toggle -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Wrapper for page content -->
+    <div class="page-wrapper">
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2 class="faq">ALS Frequently Asked Questions</h2>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">What is ALS?</div>
+                <div class="faq-answer">
+                    ALS (Amyotrophic Lateral Sclerosis) is a progressive neurodegenerative disease that affects nerve cells in the brain and spinal cord, leading to muscle weakness and loss of voluntary movement.
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">How is ALS diagnosed?</div>
+                <div class="faq-answer">
+                    Diagnosis involves neurological exams, electromyography (EMG), nerve conduction studies, and ruling out other conditions.
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">What are the early symptoms of ALS?</div>
+                <div class="faq-answer">
+                    Early symptoms may include muscle twitching, weakness in the limbs, difficulty speaking, or trouble swallowing.
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">Is there a cure for ALS?</div>
+                <div class="faq-answer">
+                    Currently, there is no cure for ALS, but treatments and therapies can help manage symptoms and improve quality of life.
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">What functions are usually not affected by ALS?</div>
+                <div class="faq-answer">
+                    Involuntary muscles, such as those that move the bowel and stomach, are usually not affected. The muscles that move the eyes are not affected.
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">What is the target age group of ALS?</div>
+                <div class="faq-answer">
+                    ALS affects all age groups and both sexes, but the disease usually strikes adults between 35 and 65 years old.
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">Are there ALS specific therapists?</div>
+                <div class="faq-answer">
+                    Yes. The ALS Association designated Centers of Excellence, Muscular Dystrophy Association-sponsored clinics, and The Les Turner ALS Foundation provide information regarding specialists throughout the country. You can find an ALS clinic near you or contact your nearest medical center’s neurology department.
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">Should I avoid sick people?</div>
+                <div class="faq-answer">
+                    Yes. People living with ALS have weakened bodies and are more susceptible to illness. Recovery can also take longer due to the constant physical stress of ALS. If you work or live in an environment with frequent exposure to illness, discuss this with your doctors.
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">What is ROADS?</div>
+                <div class="faq-answer">
+                    ROADS (Rasch-Built Overall ALS Disability Scale) is a mathematically derived self-reported disability scale that may improve sensitivity in ALS clinical trials. It includes 28 daily activity questions rated from 0–2, helping measure functional changes more precisely.
+                </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div class="faq-item">
+                <div class="faq-question">Why is ALS also referred to as Lou Gehrig’s disease?</div>
+                <div class="faq-answer">
+                    ALS became widely known when the career of Hall of Fame Yankees first baseman Lou Gehrig was cut short by the disease in 1939. He passed away in 1941.
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Hamburger icon -->
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</nav>
-   <div class="page-wrapper">
-    <!-- FAQ Section -->
-    <div class="faq-section">
-        <h2 class="faq">ALS Frequently Asked Questions</h2>
 
-        <div class="faq-item">
-            <div class="faq-question">What is ALS?</div>
-            <div class="faq-answer">
-                ALS (Amyotrophic Lateral Sclerosis) is a progressive neurodegenerative disease that affects nerve cells in the brain and spinal cord, leading to muscle weakness and loss of voluntary movement.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">How is ALS diagnosed?</div>
-            <div class="faq-answer">
-                Diagnosis involves neurological exams, electromyography (EMG), nerve conduction studies, and ruling out other conditions.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">What are the early symptoms of ALS?</div>
-            <div class="faq-answer">
-                Early symptoms may include muscle twitching, weakness in the limbs, difficulty speaking, or trouble swallowing.
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Is there a cure for ALS?</div>
-            <div class="faq-answer">
-                Currently, there is no cure for ALS, but treatments and therapies can help manage symptoms and improve quality of life.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">What functions are usually not affected by ALS?</div>
-            <div class="faq-answer">
-                Involuntary muscles, such as those that move the bowel and stomach, are usually not affected. The muscles that move the eyes are not affected..
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">What is the target age group of ALS?</div>
-            <div class="faq-answer">
-                ALS affects all age groups and both sexes, but the disease usually strikes adults between 35 and 65 years old.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Are there ALS specific therapists?</div>
-            <div class="faq-answer">
-                Yes. The ALS Association designated Centers of Excellence, Muscular Dystrophy Association-sponsored clinics, and The Les Turner ALS Foundation provide specific information regarding specialists throughout the country. You can find an ALS clinic near you here or contact your nearest medical center’s department of neurology. You can also contact our ALS Support Team for assistance or visit our website for more information.
-
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Should I avoid sick people?</div>
-            <div class="faq-answer">
-                The short answer is yes. people living with ALSs’ bodies are weakened and more susceptible to disease. It also takes longer to recover from illness, because the body is constantly stressed from fighting ALS and has scant reserves.
-
-If you live or work in an environment that brings you into contact regularly with those who are sick, you should discuss this with your doctors.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">What is ROADS?</div>
-            <div class="faq-answer">
-                ROADS (Rasch-Built Overall ALS Disability Scale) is a relatively new mathematically derived self-reported disability scale that may become a useful approach in ALS clinical trials. It appears to be more sensitive than ALSFRS-R in measuring changes in function.
-ROADS includes 28 daily activity questions such as “Can you blow out a candle?” or “Can you roll over in bed?” The person living with ALS answers either 0 (unable to perform), 1 (abnormal: able to perform but with difficulty), and 2 (normal: able to perform without difficulty), allowing for improved answering that may be beneficial for ALS clinical trials. It is important to start to incorporate ROADS in trials of new therapeutic agents in ALS. This is how we will learn if it is better than current outcome measures and its validity.
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Why is ALS also referred to as Lou Gehrig’s disease?</div>
-            <div class="faq-answer">
-                ALS first came to the wide public attention when the Hall of Fame career of Yankee’s first baseman, Lou Gehrig, was cut short by the disease in 1939. Gehrig died in 1941.
-            </div>
-        </div>  
-    </div>
- 
-    
-<!-- Footer section -->
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2026 ALS Information Center. All rights reserved 𓆩♡𓆪</p>
     </footer>
